@@ -1,11 +1,38 @@
+<div align="center">
+
 # @zh-npm/claude-authenticity-detector
 
-Verify whether an API endpoint is serving a genuine Anthropic Claude model by probing its streaming behavior, thinking capabilities, and identity signals.
+**Verify whether an API endpoint is serving a genuine Anthropic Claude model.**
+
+  <p>
+  <a href="https://www.npmjs.com/package/@zh-npm/claude-authenticity-detector"><img src="https://img.shields.io/npm/v/@zh-npm/claude-authenticity-detector?style=flat-square&color=cb3837&logo=npm" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/@zh-npm/claude-authenticity-detector"><img src="https://img.shields.io/npm/dm/@zh-npm/claude-authenticity-detector?style=flat-square&color=cb3837&logo=npm" alt="npm downloads" /></a>
+  <a href="https://github.com/Z-M-Huang/claude-authenticity-detector"><img src="https://img.shields.io/github/stars/Z-M-Huang/claude-authenticity-detector?style=flat-square&logo=github" alt="GitHub stars" /></a>
+  <a href="https://github.com/Z-M-Huang/claude-authenticity-detector/issues"><img src="https://img.shields.io/github/issues/Z-M-Huang/claude-authenticity-detector?style=flat-square&logo=github" alt="GitHub issues" /></a>
+  <a href="https://github.com/Z-M-Huang/claude-authenticity-detector/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Z-M-Huang/claude-authenticity-detector?style=flat-square" alt="License" /></a>
+  </p>
+  <p>
+  <img src="https://img.shields.io/badge/node-%3E%3D18.0.0-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/TypeScript-5.8+-3178c6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/ESM-only-22c55e?style=flat-square" alt="ESM" />
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=Z-M-Huang.claude-authenticity-detector&style=flat-square" alt="Visitors" />
+  </p>
+</div>
+
+Probes an API endpoint's streaming behavior, thinking capabilities, token usage, and identity signals to detect whether it serves an authentic Claude model or a relay/proxy substituting a different model.
+
+---
 
 ## Installation
 
 ```bash
 npm install -g @zh-npm/claude-authenticity-detector
+```
+
+Or run directly with npx:
+
+```bash
+npx @zh-npm/claude-authenticity-detector --url https://api.anthropic.com --api-key sk-ant-... --model claude-opus-4-6
 ```
 
 ## CLI Usage
@@ -71,4 +98,4 @@ console.log(report.totalScore, report.confidence);
 
 ## License
 
-Apache-2.0
+[Apache-2.0](LICENSE)

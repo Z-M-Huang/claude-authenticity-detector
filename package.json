@@ -3,6 +3,28 @@
   "version": "0.1.0",
   "description": "Validate whether an API relay/proxy is serving authentic Claude models",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Z-M-Huang/claude-authenticity-detector.git"
+  },
+  "homepage": "https://github.com/Z-M-Huang/claude-authenticity-detector#readme",
+  "bugs": {
+    "url": "https://github.com/Z-M-Huang/claude-authenticity-detector/issues"
+  },
+  "author": "Z-M-Huang",
+  "keywords": [
+    "claude",
+    "anthropic",
+    "authenticity",
+    "detector",
+    "relay",
+    "proxy",
+    "verification",
+    "streaming",
+    "sse",
+    "ai",
+    "llm"
+  ],
   "bin": {
     "claude-authenticity-detector": "./dist/cli.js"
   },
