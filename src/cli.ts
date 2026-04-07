@@ -100,6 +100,9 @@ export async function main(argv?: string[]): Promise<void> {
   }
 }
 
-const isDirectRun = process.argv[1]?.endsWith('cli.js') ||
-  process.argv[1]?.endsWith('cli.ts');
-if (isDirectRun) main();
+import { realpathSync } from 'fs';
+import { fileURLToPath } from 'url';
+
+const self = fileURLToPath(import.meta.url);
+const invoked = (() => { try { return realpathSync(process.argv[1]); } catch { return ''; } })();
+if (invoked === self) main();

@@ -39,7 +39,7 @@ export async function runProbe(config: DetectorConfig): Promise<ProbeResult> {
           {
             role: 'user' as const,
             content:
-              'Who are you, what is your knowledge cutoff date? Please answer honestly.',
+              'What is your name and what exact month and year is your training data cutoff? Be specific about the month.',
           },
         ],
         stream: true,
@@ -94,8 +94,11 @@ export async function runProbe(config: DetectorConfig): Promise<ProbeResult> {
 
       if (event.type === 'message_delta') {
         if (event.usage) {
+          const lastInput = result.usageSnapshots.length > 0
+            ? result.usageSnapshots[0].input_tokens
+            : 0;
           result.usageSnapshots.push({
-            input_tokens: 0,
+            input_tokens: lastInput,
             output_tokens: event.usage.output_tokens,
           });
         }

@@ -19,11 +19,6 @@ const tiers: Tier[] = [
       /2025年5月/,
       /2025-05/,
       /may of 2025/i,
-    ],
-  },
-  {
-    points: 25,
-    patterns: [
       /early 2025/i,
       /2025年初/,
       /march 2025/i,

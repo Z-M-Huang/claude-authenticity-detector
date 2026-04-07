@@ -7,7 +7,7 @@ export default defineConfig([
     dts: true,
     clean: true,
     banner: {
-      js: "#!/usr/bin/env node",
+      js: '#!/usr/bin/env -S node --disable-warning=DEP0040',
     },
   },
   {
